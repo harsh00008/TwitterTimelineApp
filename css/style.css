@@ -1,0 +1,159 @@
+/* CSS Document */
+
+body{
+	background-image:url(../img/background.jpg);
+	background-size:cover;
+	@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+	font-family: 'Share Tech', sans-serif;
+	font-size:14px;
+}
+
+h1{
+	font-size:44px;
+	padding:0px;
+	margin:0px;
+}
+
+#page_content{
+	position:relative;
+	top:50px;
+	width:800px;
+	border:2px solid #999;
+	padding:10px;
+	background-color:#FFF;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	box-shadow:2px 2px 2px 2px #02546d;
+}
+
+#login_button{
+	opacity:0.8;
+}
+#login_button:hover{
+	opacity:1.0;
+}
+
+#sections{
+	width:750px;
+	padding:0px;
+	margin:0px;	
+}
+#sections>li{
+	position:relative;
+	width:700px;
+	padding:8px;
+	vertical-align:top;
+	list-style:none;
+
+}
+
+#followers_list{
+	width:400px;
+	padding:0px;
+	margin:0px;
+	min-height:100px;
+}
+
+#followers_list>li{
+	text-align:center;
+	display:inline-block;
+	list-style:none;
+	padding:10px;
+	background-color:#e2f8ff;
+	margin:2px;
+}
+#followers_list>li:hover{
+	background-color:#666;
+	color:#FFF;
+	cursor:pointer;
+}
+
+#loader{
+	display:none;
+}
+
+#export_form{
+	position:absolute;
+}
+
+#footer{
+	position:relative;
+	top:100px;
+}
+
+#searchBox{
+	padding:5px;
+	font-size:16px;
+	color:#CCC;
+	border:2px solid #999;
+	float:left;
+	width:200px;
+}
+
+#wrapper_followers{
+	min-height:70px;
+}
+
+h2{
+	background-color:#9C0;
+	padding:8px;
+}
+
+.menu{
+	padding:0px;
+	margin:0px;
+}
+.menu >li{
+	display:inline-block;
+	padding:10px;
+	margin:0px;
+	background-color:#000;
+	color:#FFF;
+	font-weight:900;
+}
+
+.menu >li:hover{
+	background-color:#f8d827;
+	color:#000;
+	cursor:pointer;
+}
+
+#searchResult{
+	position:absolute;
+	top:120px;
+	border:1px solid #666;
+	
+	text-align:left;
+	z-index:2;
+}
+
+#bottom_section{
+	padding:0px;
+	margin:0px;
+}
+#bottom_section>li{
+	display:inline-block;
+	list-style:none;
+	vertical-align:top;
+}
+
+.search_list{
+	padding:0px;
+	margin:0px;
+}
+.search_list>li{
+	display:block;
+	width:200px;
+	
+}
+
+.search_list>li:hover{
+	background-color:#CCC;
+	cursor:pointer;
+}
+#searchResult{
+	position:absolute;
+	top:120px;
+	display:none;
+	z-index:10;
+}
