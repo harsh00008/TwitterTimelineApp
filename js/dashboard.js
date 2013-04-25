@@ -19,6 +19,7 @@ function populateFollowersTweets(screen_name){
   
  //exporting the pdf
 function export_pdf(){
+<<<<<<< HEAD
  	var html='';
     //We retrieve text from each li and add it to the HTML var
 		$('.bxslider li').each(function() {
@@ -30,6 +31,14 @@ function export_pdf(){
 		 	var img='http://twitterapp.6te.net/img/twitter_bird_icon.png';
 		 }
           html=html+'<p style="border-top:1px dotted #666;background-color:#FFF"><table width="600"><tr><td width=80><img src="'+img+'"></td><td width=400>'+$(this).text()+'</td></tr></table></p>';
+=======
+	var timelineTitle=$('#timeline_title').html();
+	//HTML variable contains the actaul HTML code to print
+ 	var html='<h1>'+timelineTitle+'</h1><hr>';
+    //We retrieve text from each li and add it to the HTML var
+		$('.bxslider li').each(function() {
+          html=html+'<li>'+$(this).text()+'</li>';
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
         });
 		//We set this html into a hidden teat are dorm
 		$('#content').val(html);
@@ -46,16 +55,22 @@ function setDefaultText(){
 
 //to display current user's home timeline
 function displayHomeTimeline(){
+<<<<<<< HEAD
 	var myScreenName=$('#home_screen_name').html();
 	var user_image=$('#home_user_image').attr('src');
+=======
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
 	//hide export link so that no one accesses it in between processing
 	$('#export_li').hide();
 	//Set title to my home time line
 	 $('#timeline_title').html('<h2>My Home Timeline</h2>');
+<<<<<<< HEAD
  	//Input the screen_name in the hidden text
 	  $('#screen_name').val(myScreenName);
 	  //Input the follower's image link
 	 $('#user_image').val(user_image);
+=======
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
 	 //display the loader image
 	$('#wrapper_slider').html('<img src="img/loader.gif">');
 	//display user's home time line with an AJAX call
@@ -84,6 +99,7 @@ $(document).ready(function(){
 			  $('#followers_list>li').click(function(){
 				  //follower's screen_name 
 				  var follower_name=$(this).text();
+<<<<<<< HEAD
 				  var user_image=$(this).find('img').attr('src');
 				  //Set the title to the follower's screen name, retrieving it from the list
 				  $('#timeline_title').html('<h2>'+follower_name+'\'s Statuses</h2>');
@@ -91,6 +107,10 @@ $(document).ready(function(){
 				  $('#screen_name').val(follower_name);
 				    //Input the follower's image link
 				  $('#user_image').val(user_image);
+=======
+				  //Set the title to the follower's screen name, retrieving it from the list
+				  $('#timeline_title').html('<h2>'+follower_name+'\'s Statuses</h2>');
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
 				  //Display the loader image before any activity starts
 				  $('#wrapper_slider').html('<img src="img/loader.gif">');
 				  //call the function, which max an AJAX request to laod the tweets
@@ -135,6 +155,7 @@ $(document).ready(function(){
 	$('.search_list>li').click(function(){
 		//follower's screen_name 
 				  var follower_name=$(this).text();
+<<<<<<< HEAD
 				  var user_image=$(this).find('img').attr('src');
 				 
 				  //Set the title to the follower's screen name, retrieving it from the list
@@ -143,6 +164,10 @@ $(document).ready(function(){
 				  $('#screen_name').val(follower_name);
 				  //Input the follower's image link
 				  $('#user_image').val(user_image);
+=======
+				  //Set the title to the follower's screen name, retrieving it from the list
+				  $('#timeline_title').html('<h2>'+follower_name+'\'s Statuses</h2>');
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
 				  //Display the loader image before any activity starts
 				  $('#wrapper_slider').html('<img src="img/loader.gif">');
 				  //call the function, which max an AJAX request to laod the tweets

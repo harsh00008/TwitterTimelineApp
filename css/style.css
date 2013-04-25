@@ -48,14 +48,21 @@ h1{
 }
 
 #followers_list{
+<<<<<<< HEAD
 	width:500px;
+=======
+	width:400px;
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
 	padding:0px;
 	margin:0px;
 	min-height:100px;
 }
 
 #followers_list>li{
+<<<<<<< HEAD
 	width:200px;
+=======
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
 	text-align:center;
 	display:inline-block;
 	list-style:none;
@@ -93,7 +100,10 @@ h1{
 
 #wrapper_followers{
 	min-height:70px;
+<<<<<<< HEAD
 	text-align:left;
+=======
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
 }
 
 h2{

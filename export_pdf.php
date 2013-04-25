@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 include('lib/mpdf/mpdf.php');
 session_start();
 $user_info=$_SESSION['user_info'];
@@ -26,3 +27,20 @@ $mpdf->Output($file_name,'D');
 exit;
 
 ?>
+=======
+$content=$_POST['content'];
+$file_name="TimelineAppTweets".time().".pdf";
+require_once("lib/dompdf/dompdf_config.inc.php");
+
+$html =
+  '<html><body><center>'.
+  $content
+  .'</center></body></html>';
+
+$dompdf = new DOMPDF();
+$dompdf->load_html($html);
+$dompdf->render();
+$dompdf->stream($file_name);
+
+?>
+>>>>>>> d8fe19af109ad4ec95b16e6ecf868fe11ddbdf3a
