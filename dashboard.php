@@ -19,9 +19,6 @@
 <script src="lib/slider/jquery.bxslider.js"></script>
 <!-- bxSlider CSS file -->
 
-
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Welcome to your Dashboard!</title>
 </head>
@@ -43,13 +40,19 @@
 				
 		}
 ?>
-
             <div id="page_content">
-            <h1>Welcome <?php 
-				
-				echo $user_info->screen_name;
+           
+            <h1>Welcome<br /><table><tr><Td>
+            <?php echo ' <img src="'.$user_info->profile_image_url.'" id="home_user_image"/>';?>
+            </Td><td>
+             <div id="home_screen_name">
+			<?php 
+						
+						echo $user_info->screen_name;
 			
-			?></h1> 
+			?></div>
+            </td></tr></table>
+            </h1> 
             <div id="wrapper_menu">
             	<ul class="menu">
                 	<li onclick="displayHomeTimeline()">My Home Timeline</li>
@@ -73,7 +76,9 @@
                                     
                                 </ul>
                             </div>
-                              <form action="export_pdf.php" method="post" id="export_form" hidden="hidden">
+                              <form action="export_pdf.php" method="post" id="export_form" hidden="hidden" target="_blank">
+                              		<input type="text" name="user_image" id="user_image" hidden="hidden"/>
+                              		<input type="text" name="screen_name" id="screen_name" hidden="hidden"/>
                                      <textarea name="content" id="content" hidden="hidden"></textarea>
                               </form>
                                 

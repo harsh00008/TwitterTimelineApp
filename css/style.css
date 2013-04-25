@@ -48,13 +48,14 @@ h1{
 }
 
 #followers_list{
-	width:400px;
+	width:500px;
 	padding:0px;
 	margin:0px;
 	min-height:100px;
 }
 
 #followers_list>li{
+	width:200px;
 	text-align:center;
 	display:inline-block;
 	list-style:none;
@@ -92,6 +93,7 @@ h1{
 
 #wrapper_followers{
 	min-height:70px;
+	text-align:left;
 }
 
 h2{
