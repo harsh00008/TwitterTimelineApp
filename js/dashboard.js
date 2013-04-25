@@ -2,11 +2,16 @@
 
 //function to populate the slider with follower's tweets
 function populateFollowersTweets(screen_name){
+	//hide export button
 	$('#export_li').hide();
+	//AJAX call to display user's time line with a call back function
 		$.get('display_user_timeline.php?sname='+screen_name+'', function(data) {
+			//replace the data inside wrapper slider
 			  $('#wrapper_slider').html(data);
+			  //start the slider
 			  $('.bxslider').bxSlider({
 		  auto:true});
+		  //unhide the export pdf button
 		  	$('#export_li').show();
 			});
 }
@@ -30,6 +35,7 @@ function export_pdf(){
 //show all the followers which are/were hidden during search
 function setDefaultText(){
 		$('#searchBox').val("Type follower's name");
+		 //hide search result
 		 $('#searchResult').hide();
 }
 
@@ -41,11 +47,14 @@ function displayHomeTimeline(){
 	 $('#timeline_title').html('<h2>My Home Timeline</h2>');
 	 //display the loader image
 	$('#wrapper_slider').html('<img src="img/loader.gif">');
-	//display user's home time line
+	//display user's home time line with an AJAX call
 	$.get('display_home_timeline.php', function(data) {
+			//Replace the data inside wrapper slider
 			  $('#wrapper_slider').html(data);
+			  //Start the slider after the data is loaded
 			  $('.bxslider').bxSlider({
 			  auto:true});
+			  //display the export button after everything loads fine
 			  $('#export_li').show();
 	});
 }
@@ -78,15 +87,14 @@ $(document).ready(function(){
 			  //by default hide the list
 			  $("#searchResult").hide();
 			  $("#searchBox").keyup(function(){
+						//if tthere's nothing in the search box, fade away the search result div,otherwise fade it in
 						if($("#searchBox").val().length==0){
-							
 							$("#searchResult").fadeOut();
 						}else{
 							$("#searchResult").fadeIn();
 						}
 							// Retrieve the input field text and reset the count to zero
 							var filter = $(this).val(), count = 0;
-					
 							// Loop through the search list
 							$(".search_list li").each(function(){
 								// If the list item does not contain the text phrase fade it out
@@ -94,8 +102,7 @@ $(document).ready(function(){
 									$(this).fadeOut();
 								// Show the list item if the phrase matches and increase the count by 1
 								} else {
-									$(this).show();
-								
+									$(this).show();								
 								}
 							});
 			});
